@@ -96,8 +96,8 @@ function MicrophoneStream(opts) {
   }
 
   this.resetBuffer = function() {
-    console.log(self, 'buffer_size');
-    self.splice(0, self.length);
+    console.log(self.push);
+    self.push(null);
   } 
   
   this.stop = function() {
