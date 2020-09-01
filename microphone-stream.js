@@ -87,7 +87,14 @@ function MicrophoneStream(opts) {
     this.setStream(stream);
   }
 
-
+  this.pause = function() {
+    recording = false;
+  }
+  
+  this.play = function() {
+    recording = true;
+  }
+  
   this.stop = function() {
     if (context.state === 'closed') {
       return;
