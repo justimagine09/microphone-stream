@@ -94,6 +94,10 @@ function MicrophoneStream(opts) {
   this.play = function() {
     recording = true;
   }
+
+  this.reserBuffer = function() {
+    self.splice(0, self.length);
+  } 
   
   this.stop = function() {
     if (context.state === 'closed') {
