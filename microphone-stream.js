@@ -95,7 +95,7 @@ function MicrophoneStream(opts) {
     recording = true;
   }
 
-  this.reserBuffer = function() {
+  this.resetBuffer = function() {
     self.splice(0, self.length);
   } 
   
